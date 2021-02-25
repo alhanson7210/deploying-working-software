@@ -28,12 +28,11 @@ def check_the_last_page_is_at_most_20_pages(search_for_the_most_recent_anime_ser
 def check_that_the_next_or_current_year_is_present(search_for_the_most_recent_anime_series):
     response = search_for_the_most_recent_anime_series.json()
     results = response['results']
-    filtered_results = list(filter(lambda obj: obj['start_date'] != "null", results))
+    filtered_results = list(filter(lambda obj: obj['start_date'] != "None", results))
     current_year = int(date.today().year)
     c_year = str(current_year)
     next_year = current_year + 1
     n_year = str(next_year)
-    length = len(results)
     expected = True
     actual = False
     for result in filtered_results:
