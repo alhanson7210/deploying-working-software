@@ -38,6 +38,8 @@ def check_that_the_next_or_current_year_is_present(search_for_the_most_recent_an
     actual = False
     for result in filtered_results:
         start_date = result['start_date']
+        if start_date is None:
+            continue
         if n_year in start_date or c_year in start_date:
             actual = True
             break
