@@ -1,0 +1,3 @@
+[submodule "assignments/a3-docker-flask-deploy"]
+	path = assignments/a3-docker-flask-deploy
+	url = git@github.com:alhanson7210/flask-docker.git
