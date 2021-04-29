@@ -1,9 +1,22 @@
-from flask import make_response, request, session
-from 'user_model' import UserManager
+from flask import make_response, request, render_template
+from user_model import UserManager
+
+def get_cookie():
+    user = request.cookies.get('username')
+
+class Session:
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def set_cookie():
+        if request.method == 'POST':
+            user = request.form['email']
+            resp = make_response(render_template('riff_tracker.html'))
+            resp.set_cookie('username', user)
+            return resp
 
 class SessionManager:
     def __init__(self):
-        this.user: UserManager = UserManager()
-    
-    def setcookie(user):
-        session['user'] = user
+        self.user_manager: UserManager = UserManager()
+        self.user_session: Session = Session()
