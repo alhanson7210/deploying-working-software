@@ -1,9 +1,12 @@
+name: CICD
 on:
   push:
     branches:
       - main
-
-name: CICD
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   cicd:

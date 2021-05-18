@@ -4,3 +4,6 @@
 [submodule "assignments/a4-ecs-deploy"]
 	path = assignments/a4-ecs-deploy
 	url = git@github.com:alhanson7210/flask-docker.git
+[submodule "projects/p1-cicd-project"]
+	path = projects/p1-cicd-project
+	url = git@github.com:alhanson7210/p1-cicd-project.git
