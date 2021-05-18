@@ -1,0 +1,18 @@
+on:
+  push:
+    branches:
+      - main
+
+name: CICD
+
+jobs:
+  cicd:
+    name: CICD
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        run: |
+          ls -alt
+          pwd
