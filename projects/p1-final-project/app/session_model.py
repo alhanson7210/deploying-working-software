@@ -1,4 +1,5 @@
 from flask import make_response, request, render_template
+from app.database_model import DatabaseManager
 from user_model import UserManager
 
 def get_cookie():
@@ -20,3 +21,4 @@ class SessionManager:
     def __init__(self):
         self.user_manager: UserManager = UserManager()
         self.user_session: Session = Session()
+        self.database_manager: DatabaseManager = DatabaseManager()
